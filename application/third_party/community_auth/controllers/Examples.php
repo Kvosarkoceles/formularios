@@ -38,7 +38,7 @@ class Examples extends MY_Controller
 	 */
 	public function index()
 	{
-		if( $this->require_role('admin') )
+		if( $this->verify_min_level(1) )
 		{
 			echo $this->load->view('examples/page_header', '', TRUE);
 
